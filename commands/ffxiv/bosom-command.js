@@ -13,6 +13,6 @@ module.exports = class BosomCommand extends Commando.Command {
 
   async run(message) {
     message.delete();
-    Utils.playMp3(message, "lakshmi.wav");
+    Utils.playFile(message, "lakshmi.wav");
   }
 }

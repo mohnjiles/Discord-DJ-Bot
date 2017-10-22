@@ -7,11 +7,12 @@ module.exports = class SloppyCommand extends Commando.Command {
       name: "sloppy",
       group: "ffxiv",
       memberName: "sloppy",
-      description: ""
+      description: "Ilberd's favorite word"
     });
   }
 
   async run(message) {
-
+    message.delete();
+    Utils.playFile(message, "sloppy.wav");
   }
 }

@@ -13,6 +13,6 @@ module.exports = class KillCommand extends Commando.Command {
 
   async run(message) {
     message.delete();
-    Utils.playMp3(message, "kill.wav");
+    Utils.playFile(message, "kill.wav");
   }
 }

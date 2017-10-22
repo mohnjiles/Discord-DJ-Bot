@@ -12,8 +12,8 @@ module.exports = class SusanoCommand extends Commando.Command {
       name: "susano",
       group: "ffxiv",
       memberName: "susano",
-      description: "",
-      aliases: [''],
+      description: "Hark you!",
+      aliases: ['susan'],
       args: [
         {
           key: 'clipNumber',
@@ -30,11 +30,11 @@ module.exports = class SusanoCommand extends Commando.Command {
     message.delete();
 
     if (clipNumber == -1) {
-      Utils.playMp3(message, susanoClips[Utils.getRandomIntInclusive(0, 9)]);
+      Utils.playFile(message, susanoClips[Utils.getRandomIntInclusive(0, 9)]);
     } else if (clipNumber != -1 && clipNumber > 9) {
       message.reply("Please enter a number between 0-9");
     } else {
-      Utils.playMp3(message, susanoClips[clipNumber]);
+      Utils.playFile(message, susanoClips[clipNumber]);
     }
 
   }

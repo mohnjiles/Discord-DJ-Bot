@@ -12,6 +12,7 @@ module.exports = class BoomCommand extends Commando.Command {
   }
 
   async run(message) {
-
+    message.delete();
+    Utils.playFile(message, "boom.wav");
   }
 }

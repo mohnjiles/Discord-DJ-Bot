@@ -1,6 +1,6 @@
 module.exports = class Utils {
 
-  static playMp3(message, fileName) {
+  static playFile(message, fileName) {
     let voiceChannel = message.member.voiceChannel;
     voiceChannel.join().then(connection => {
       let dispatcher = connection.playFile(`./audio-clips/${fileName}`);

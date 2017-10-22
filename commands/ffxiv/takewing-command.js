@@ -12,6 +12,7 @@ module.exports = class TakeWingCommand extends Commando.Command {
   }
 
   async run(message) {
-
+    message.delete();
+    Utils.playFile(message, "takewing.wav");
   }
 }
