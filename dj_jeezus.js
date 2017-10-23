@@ -19,7 +19,8 @@ client.on('ready', () => {
 
 client.registry.registerGroups([
   ['ffxiv', 'Final Fantasy XIV Commands'],
-  ['misc-audio', 'Miscellaneous Audio Clips Commands']
+  ['misc-audio', 'Miscellaneous Audio Clips Commands'],
+  ['misc', 'Miscellaneous Commands']
 ]).registerDefaults()
   .registerCommandsIn(path.join(__dirname, 'commands'));
 
