@@ -6,7 +6,8 @@ const config = require('./config.json');
 
 const client = new Commando.Client({
   owner: config.owner,
-  disableEveryone: true
+  disableEveryone: true,
+  unknownCommandResponse: false
 });
 
 client.setProvider(
@@ -18,10 +19,10 @@ client.on('ready', () => {
 });
 
 client.registry.registerGroups([
-  ['ffxiv', 'Final Fantasy XIV Commands'],
-  ['misc-audio', 'Miscellaneous Audio Clips Commands'],
-  ['misc', 'Miscellaneous Commands']
-]).registerDefaults()
+    ['ffxiv', 'Final Fantasy XIV Commands'],
+    ['misc-audio', 'Miscellaneous Audio Clips Commands'],
+    ['misc', 'Miscellaneous Commands']
+  ]).registerDefaults()
   .registerCommandsIn(path.join(__dirname, 'commands'));
 
 let music = Music(client, {
